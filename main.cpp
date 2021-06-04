@@ -32,7 +32,7 @@ int menu(){
 }
 int main(int argc, char** argv) {
 	vector<Mago*> listaMagos;
-	//ClaseHogwarts* clasehg;
+	ClaseHogwarts* clase;
 	SombreroClasificador* sombrero=new SombreroClasificador;
 	int main=0;
 	while(main!=4){
@@ -81,18 +81,20 @@ int main(int argc, char** argv) {
 				int year;
 				cout<<"ingrese year: ";
 				cin>>year;
-				ClaseHogwarts* clase=sombrero->clasificar_magos_nuevos(listaMagos,year);
+				 clase=sombrero->clasificar_magos_nuevos(listaMagos,year);
+			    cout<<"Clasificado"<<endl;
+				
+				
+				break;
+			}
+			case 2:{
 				clase->print();
-				cout<<endl;
-				/*
-				cout<<"cantidad magos: "<<contm<<endl;
-				int year;
-				cout<<"ingrese year: ";
-				cin>>year;
-				clasehg=new ClaseHogwarts(year);*/
 			
-				/*
-				int conts=0,contr=0,conth=0,contg=0;
+				
+				break;
+			}
+			case 3:{
+					int conts=0,contr=0,conth=0,contg=0;
 				for(int i=0;i<listaMagos.size();i++){
 					if(typeid( *listaMagos[i])==typeid(MagoSlytherin)){
 						conts++;
@@ -108,32 +110,26 @@ int main(int argc, char** argv) {
 						contg++;
 					}
 				}
-				cout<<"Cantidad Slytherin: "<<conts<<endl;
-				cout<<"Cantidad Hufflepluff: "<<conth<<endl;
-				cout<<"Cantidad Ravenclaw: "<<contr<<endl;
-				cout<<"Cantidad Gryffdindor: "<<contg<<endl;
-				*/
-				break;
-			}
-			case 2:{
-				
-				break;
-			}
-			case 3:{
-				
+				clase->promedio_habilidades_por_casa(contg,conts,conth,contr);
 				
 				break;
 			}
 			case 4:{
-				
+				cout<<"saliendo"<<endl;
 				
 				break;
 			}
-			case 5:{
-				cout<<"Saliendo";
-				break;
-			}
+		
 		}//sitwch
 	}//while
+	 //listaMagos=0;
+	 clase=0;
+	 sombrero=0;
+	 delete clase;
+	 delete sombrero;
+	 for(int i=0;i<listaMagos.size();i++){
+	 	delete listaMagos[i];
+	 }
+	 listaMagos.clear();
 	return 0;
 }

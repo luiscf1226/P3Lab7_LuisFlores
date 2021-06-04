@@ -18,8 +18,9 @@ class ClaseHogwarts
 		//
 		
 	public:
+		
 		void print();
-		void promedio_habilidades_por_casa();
+		void promedio_habilidades_por_casa(int,int,int,int);
 		ClaseHogwarts();
 		ClaseHogwarts(int);
 		vector<MagoSlytherin*> getMagosSlytherin();
