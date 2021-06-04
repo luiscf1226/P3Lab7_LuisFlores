@@ -6,7 +6,7 @@ string MagoHufflepuff::toString(){
 	
 }
 MagoHufflepuff::MagoHufflepuff(){
-	srand (time(NULL));
+	//srand (time(NULL));
 	this->paciencia=rand() % 21+ 80;
 	this->astucia=rand() % 101;
 	this->inteligencia=rand() % 101;

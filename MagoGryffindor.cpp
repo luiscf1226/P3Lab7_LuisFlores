@@ -6,7 +6,7 @@ string MagoGryffindor::toString(){
 	
 }
 MagoGryffindor::MagoGryffindor(){
-	srand (time(NULL));
+	//srand (time(NULL));
 	this->atrevimiento=rand() % 21+ 80;
 	this->astucia=rand() % 101;
 	this->inteligencia=rand() % 101;

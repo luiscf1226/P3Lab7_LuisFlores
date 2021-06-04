@@ -8,7 +8,7 @@ string MagoSlytherin::toString(){
 	
 }
 MagoSlytherin::MagoSlytherin(){
-	srand (time(NULL));
+//	srand (time(NULL));
 	this->astucia=rand() % 21+ 80;
 	this->liderazgo=rand() % 21+ 80;
 	this->inteligencia=rand() % 101;

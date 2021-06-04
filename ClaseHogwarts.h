@@ -18,6 +18,7 @@ class ClaseHogwarts
 		//
 		
 	public:
+		void print();
 		void promedio_habilidades_por_casa();
 		ClaseHogwarts();
 		ClaseHogwarts(int);
@@ -30,7 +31,12 @@ class ClaseHogwarts
 		void setMagosHufflepuff(vector<MagoHufflepuff*>);
 		void setMagosGryffindor(vector<MagoGryffindor*>);
 		void setMagosRavenclaw(vector<MagoRavenclaw*>);
+		
 		//
+		void addMagoS(MagoSlytherin*);
+		void addMagoH(MagoHufflepuff*);
+		void addMagoG(MagoGryffindor*);
+		void addMagoR(MagoRavenclaw*);
 		int getYear();
 		
 	
