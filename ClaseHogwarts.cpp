@@ -2,7 +2,27 @@
 ClaseHogwarts::ClaseHogwarts(){
 	
 }
-
+ClaseHogwarts::~ClaseHogwarts(){
+	for(int i=0;i<this->magos_gryffindor.size();i++){
+		delete this->magos_gryffindor[i];
+	}
+	this->magos_gryffindor.clear();
+	//
+	for(int i=0;i<this->magos_hufflepuff.size();i++){
+		delete this->magos_hufflepuff[i];
+	}
+	this->magos_hufflepuff.clear();
+	//
+	for(int i=0;i<this->magos_ravenclaw.size();i++){
+		delete this->magos_ravenclaw[i];
+	}
+	this->magos_ravenclaw.clear();
+	//
+	for(int i=0;i<this->magos_slytherin.size();i++){
+		delete this->magos_slytherin[i];
+	}
+	this->magos_slytherin.clear();
+}
 ClaseHogwarts::ClaseHogwarts(int y){
 	this->year=y;
 }

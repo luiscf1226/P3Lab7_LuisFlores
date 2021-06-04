@@ -18,7 +18,7 @@ class ClaseHogwarts
 		//
 		
 	public:
-		
+		~ClaseHogwarts();
 		void print();
 		void promedio_habilidades_por_casa(int,int,int,int);
 		ClaseHogwarts();
